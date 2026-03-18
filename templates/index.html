@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Password Security Dashboard</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Password Security Dashboard</h1>
+
+        <div class="card">
+
+            <h2>Password Analyzer</h2>
+
+            <div class="password-box">
+
+                <input type="password" id="password" placeholder="Enter password" oninput="checkPassword()">
+
+                <button onclick="togglePassword()">👁</button>
+
+            </div>
+
+            <div class="strength-bar">
+                <div id="strength-fill"></div>
+            </div>
+
+            <p id="strength-text"></p>
+
+        </div>
+
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h2>Security Score</h2>
+
+                <div class="score-bar">
+                    <div id="score-fill"></div>
+                </div>
+
+                <p id="score-text">Score: 0 / 100</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>Password Generator</h2>
+
+                <button onclick="generatePassword()" class="primary">
+                    Generate Strong Password
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Password Analysis</h2>
+
+            <div id="result"></div>
+
+        </div>
+
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h2>Attack Chart</h2>
+
+                <canvas id="attackChart"></canvas>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>Security Radar</h2>
+
+                <canvas id="radarChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Attack Simulation</h2>
+
+            <div id="terminal"></div>
+
+        </div>
+
+    </div>
+
+    <script src="/static/charts.js"></script>
+    <script src="/static/dashboard.js"></script>
+
+</body>
+
+</html>
